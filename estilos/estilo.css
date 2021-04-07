@@ -25,7 +25,7 @@ h1 {
     width: 117px;
     height: 146px;
     background-color: #A7E9AF;
-    margin-left: 40px;
+    margin:0 20px 40px 20px;
     margin-bottom: 40px;
     border: 1px solid #99CEA8;
     border-radius: 5px;
@@ -47,10 +47,13 @@ h1 {
 @media only screen and (max-width: 390px){
     .cards-container {
         width: 97%;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .card {
         margin-left: 5px;
+        margin-right: 5px;
     }
 
 }
