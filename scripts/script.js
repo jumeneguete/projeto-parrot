@@ -19,8 +19,6 @@ function mostrarCartas (){
     let listaDobrada = [];
 
     for (let i =0; i < qtdd/2; i++){
-        //listaDobrada[i] = listaImagens[i];
-       //listaDobrada[i+1] = listaImagens[i];
 
         listaDobrada.push(listaImagens[i]);
         listaDobrada.push(listaImagens[i]);
@@ -68,7 +66,6 @@ function regraDoJogo(elementoClicado){
         
         if (elementoClicadoAnterior !== undefined && paraCima !== undefined){
             if (elementoClicadoAnterior.innerHTML == elementoClicado.innerHTML){
-                console.log(elementoClicadoAnterior)
                 elementoClicado.setAttribute('onclick', "");
                 elementoClicadoAnterior.setAttribute('onclick', "");
                 contadorDeCartasViradas += 2;
@@ -116,27 +113,3 @@ function virarCarta (cartaSelecionada){
     cartaSelecionada.classList.add("viradaParaCima");
   
 }
-
-//contadordeJogadas =0
-//contador de cartas viradas para cima = 0
-//elemento clicado anterior
-
-/*função regra do jogo(elemento clicado){
-    Se a carta estiver virada para baixo
-        virar a carta para cima
-        contador + 1
-    saber SE uma carta anterior está virada
-            SE as duas cartas forem iguais
-                efeito - as duas não desviram
-                add uma classe .combinada
-                contador de cartas viradas para cima
-                elemento clicado anterior + return
-            SE elas não forem iguais
-                efeito - as duas viram para baixo (1s setTimeOut)
-    Verificar se todas as cartas estão viradas para cima
-        efeito- se sim, jogar um alert na tela
-
-    elemento clicado anterior
-}*/
-
-//tratar se a carta clicada é a mesmma carta - clicou duas vezes na mesma carta - id em cartas com a mesma figura
